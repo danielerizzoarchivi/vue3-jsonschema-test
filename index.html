@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JSON Schema Form</title>
+    <!-- <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/element-plus/2.0.4/index.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/element-plus/2.5.3/index.min.css">
+    <script src="https://unpkg.com/vue@3.4.15/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/element-plus"></script>
+    <script src="https://npm.elemecdn.com/@lljj/vue3-form-element/dist/vue3-form-element.umd.min.js"></script>
+</head>
+
+<body>
+    <h1>Test jsonschema</h1>
+    <div id="app">
+        <vue3-form-element 
+            :schema="schema" 
+            :ui-schema="uiSchema" 
+            v-model="formData"
+            :form-props="formProps"
+            :form-footer="formFooter"
+            @submit="consoleLog({formData, schema, uiSchema, formProps, formFooter})"
+            >
+            
+       </vue3-form-element>            
+    </div>
+    <!-- div slot-scope="{ formData  }">
+        <pre style="background-color: #eee;">{{ JSON.stringify(formData, null, 4) }}</pre>
+         <p><el-button @click="consoleLog(formData)" type="primary">OK</el-button></p> 
+    </div -->
+   
+
+    <script type="module" src="./main.js">
+    </script>
+</body>
+
+</html>
