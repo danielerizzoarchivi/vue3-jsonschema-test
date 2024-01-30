@@ -1,4 +1,4 @@
-import { schema, uiSchema } from './schema.js';
+import { schema, uiSchema, errorSchema } from './schema.js';
 
 
 const app = Vue.createApp({
@@ -10,10 +10,10 @@ const app = Vue.createApp({
     data() {
         return {
             formData: {
-
             },
             schema,
             uiSchema,
+            errorSchema,
             formFooter: {
                 show: true, // Indica se visualizzare il footer predefinito
                 okBtn: 'Salva', // Conferma il testo del pulsante
